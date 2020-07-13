@@ -19,11 +19,11 @@ class CreateCompaniesTable extends Migration
             $table->string('country', 15);
             $table->string('city', 15);
             $table->string('site', 20);
-            $table->string('address', 40);
-            $table->integer('revenue');
-            $table->integer('amount_workers');
-            $table->timestamp('years');
-            $table->text('comment');
+            $table->string('address', 40)->nullable();
+            $table->integer('revenue')->nullable();
+            $table->integer('amount_workers')->nullable();
+            $table->timestamp('years')->nullable();
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }

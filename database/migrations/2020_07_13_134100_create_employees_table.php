@@ -16,12 +16,12 @@ class CreateEmployeesTable extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('full_name', 50);
-            $table->unsignedBigInteger('company_id');
-            $table->string('position', 50);
+            $table->unsignedBigInteger('company_id')->nullable();
+            $table->string('position', 50)->nullable();
             $table->string('email', 30);
-            $table->string('linkedin_link', 50);
-            $table->string('status', 15);
-            $table->text('comment');
+            $table->string('linkedin_link', 50)->nullable();
+            $table->string('status', 15)->nullable();
+            $table->text('comment')->nullable();
             $table->timestamps();
 
             $table->foreign('company_id')->references('id')->on('companies');
