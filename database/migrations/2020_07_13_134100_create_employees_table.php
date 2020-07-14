@@ -17,9 +17,9 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('full_name', 50);
             $table->unsignedBigInteger('company_id')->nullable();
-            $table->string('position', 50)->nullable();
+            $table->string('position', 70)->nullable();
             $table->string('email', 30);
-            $table->string('linkedin_link', 50)->nullable();
+            $table->string('linkedin', 100)->nullable();
             $table->string('status', 15)->nullable();
             $table->text('comment')->nullable();
             $table->timestamps();

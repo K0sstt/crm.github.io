@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+//Route::get('/', 'GoogleSheetsController@getAllRows')->name('home');
 Route::get('/', 'HomeController@index')->name('home');

@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google_sheets' => [
+        'id' => env('GOOGLE_SHEET_ID', ''),
+        'name' => env('GOOGLE_SHEET_NAME', 'Лист1'),
+        'access_file' => env('ACCESS_FILE', ''),
+    ],
+
 ];
