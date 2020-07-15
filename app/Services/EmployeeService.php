@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Company;
 use App\Models\Employee;
+use Illuminate\Support\Collection;
 
 final class EmployeeService
 {
@@ -22,6 +23,14 @@ final class EmployeeService
     }
 
     /**
+     * @return Collection|null
+     */
+    public function all(): ?Collection
+    {
+        return $this->model->all();
+    }
+
+    /**
      * @param array $employee
      * @return Company|null
      */
@@ -32,5 +41,17 @@ final class EmployeeService
         } else {
             return null;
         }
+    }
+
+    /**
+     * @param Employee $employee
+     * @param array $data
+     * @return Employee
+     */
+    public function update(Employee $employee, array $data): Employee
+    {
+        $employee->update($data);
+
+        return $employee;
     }
 }

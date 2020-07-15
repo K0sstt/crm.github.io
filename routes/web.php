@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 //Route::get('/', 'GoogleSheetsController@getAllRows')->name('home');
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'CompanyController@index')->name('home');
+Route::post('companies.search', 'CompanyController@search')->name('companies.search');
+Route::resource('companies', 'CompanyController');
+Route::resource('employees', 'EmployeeController');
+Route::post('employees.search', 'EmployeeController@search')->name('employees.search');

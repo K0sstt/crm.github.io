@@ -33,4 +33,16 @@ final class CompanyService
             return null;
         }
     }
+
+    /**
+     * @param Company $company
+     * @param array $data
+     * @return Company
+     */
+    public function update(Company $company, array $data): Company
+    {
+        $company->update($data);
+
+        return $company;
+    }
 }
