@@ -73,7 +73,7 @@ class GoogleSheetsController extends Controller
 
                 $rowEmployee = array_slice($row, 11);
                 $employee['full_name'] = $rowEmployee[0] . ' ' . $rowEmployee[1];
-                $employee['company_id'] = $companyModel->id;
+                $employee['company_id'] = $companyModel->id ?? null;
                 $employee['position'] = $rowEmployee[2];
                 $employee['email'] = $rowEmployee[3];
                 $employee['linkedin'] = $rowEmployee[4];
@@ -84,7 +84,7 @@ class GoogleSheetsController extends Controller
                 $rowEmployee = array_slice($row, 11);
 
                 $employee['full_name'] = $rowEmployee[0] . ' ' . $rowEmployee[1];
-                $employee['company_id'] = $companyModel->id;
+                $employee['company_id'] = $companyModel->id ?? null;
                 $employee['position'] = $rowEmployee[2];
                 $employee['email'] = $rowEmployee[3];
                 $employee['linkedin'] = $rowEmployee[4];
